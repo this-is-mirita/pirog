@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "174194308617",
+    "firebase_url": "https://music-chime-new-project-default-rtdb.firebaseio.com",
+    "project_id": "music-chime-new-project",
+    "storage_bucket": "music-chime-new-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174194308617:android:f8c7c5193c4ab551f2ead8",
+        "android_client_info": {
+          "package_name": "com.example.pirog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174194308617-vh6nv6cn2v8s55ut4ku58mfh15r9ma6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFTTTmun84A61DW6WyJkG6UeUrx--Suy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174194308617-vh6nv6cn2v8s55ut4ku58mfh15r9ma6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174194308617:android:d25d6780ea1d715af2ead8",
+        "android_client_info": {
+          "package_name": "com.example.tort_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174194308617-vh6nv6cn2v8s55ut4ku58mfh15r9ma6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFTTTmun84A61DW6WyJkG6UeUrx--Suy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174194308617-vh6nv6cn2v8s55ut4ku58mfh15r9ma6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174194308617:android:7e162bbc29734fdaf2ead8",
+        "android_client_info": {
+          "package_name": "com.example.tort_version1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174194308617-vh6nv6cn2v8s55ut4ku58mfh15r9ma6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFTTTmun84A61DW6WyJkG6UeUrx--Suy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174194308617-vh6nv6cn2v8s55ut4ku58mfh15r9ma6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

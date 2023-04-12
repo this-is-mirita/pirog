@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.pirog">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pirog"
+        tools:targetApi="31">
+        <activity
+            android:name=".Admin.AdminMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminDeleteProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.OrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.TovarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.CategoriesOneUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.CategoriesUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminAddNewProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Start.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Start.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.UsersHome"
+            android:exported="false"
+            android:label="@string/title_activity_users_home"
+            android:theme="@style/Theme.Pirog.NoActionBar" />
+        <activity
+            android:name=".Start.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

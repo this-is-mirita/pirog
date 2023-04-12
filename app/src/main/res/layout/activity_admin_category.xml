@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Admin.AdminCategoryActivity">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/linear1"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/slogan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выберите категорию"
+                android:textSize="25sp"
+                android:textColor="@color/pink"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/pink"
+                    android:textSize="28sp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:textStyle="bold|italic"
+                    android:text="Пирожные"></TextView>
+
+
+                <ImageView
+                    android:id="@+id/pirognie"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pirognoe"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/pink"
+                    android:textSize="28sp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:textStyle="bold|italic"
+                    android:text="Торты"></TextView>
+
+
+                <ImageView
+                    android:id="@+id/torty"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tort"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linear4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/pink"
+                    android:textSize="28sp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:textStyle="bold|italic"
+                    android:text="Мороженое"></TextView>
+
+
+                <ImageView
+                    android:id="@+id/ice_cream"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ice_cream"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linear5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/pink"
+                    android:textSize="28sp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:textStyle="bold|italic"
+                    android:text="Чизкейки"></TextView>
+
+
+                <ImageView
+                    android:id="@+id/cheese"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/cheese"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

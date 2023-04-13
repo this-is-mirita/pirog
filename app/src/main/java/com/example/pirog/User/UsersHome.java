@@ -2,12 +2,15 @@ package com.example.pirog.User;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.pirog.Interface.itemClickListener;
@@ -33,6 +36,7 @@ import androidx.recyclerview.widget.RecyclerView;
 //import com.example.pirog.databinding.ActivityUsersHomeBinding;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
@@ -59,7 +63,28 @@ public class UsersHome extends AppCompatActivity implements NavigationView.OnNav
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Ассортимент");
         setSupportActionBar(toolbar);
+        EditText searchEditText = findViewById(R.id.search_products);
+        
+        searchEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                
+            }
 
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String searchText = s.toString();
+                searchForProducts(searchText);
+
+            }
+        });
+
+        
         Intent intent = getIntent();
 
         if (intent != null)
@@ -103,6 +128,40 @@ public class UsersHome extends AppCompatActivity implements NavigationView.OnNav
         recyclerView.setLayoutManager(layoutManager);
     }
 
+    private void searchForProducts(String searchText) {
+        Query query = ProductsRef.orderByChild("pname").startAt(searchText).endAt(searchText + "\uf8ff");
+        FirebaseRecyclerOptions<Products> options = new FirebaseRecyclerOptions.Builder<Products>()
+                .setQuery(query, Products.class).build();
+        FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter = new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull @NotNull ProductViewHolder holder, int i, @NonNull @NotNull Products model) {
+                holder.txtProductName.setText(model.getPname());
+                holder.txtProductDescription.setText(model.getDescription());
+                holder.txtProductPrice.setText("Стоимость = " + model.getPrice());
+                Picasso.get().load(model.getImage()).into(holder.imageView);
+            }
+
+            @NonNull
+            @NotNull
+            @Override
+            public ProductViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
+                ProductViewHolder holder = new ProductViewHolder(view, new itemClickListener() {
+                    @Override
+                    public void onItemClick(int position) {
+                        Intent intent = new Intent(UsersHome.this, TovarActivity.class);
+                        intent.putExtra("product_id", getRef(position).getKey());
+                        startActivity(intent);
+                    }
+                });
+
+                return holder;
+            }
+        };
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -116,7 +175,7 @@ public class UsersHome extends AppCompatActivity implements NavigationView.OnNav
             protected void onBindViewHolder(@NonNull @NotNull ProductViewHolder holder, int i, @NonNull @NotNull Products model) {
                 holder.txtProductName.setText(model.getPname());
                 holder.txtProductDescription.setText(model.getDescription());
-                holder.txtProductPrice.setText("Стоимость = " + model.getPrice() + " рублей");
+                holder.txtProductPrice.setText("Стоимость = " + model.getPrice());
                 Picasso.get().load(model.getImage()).into(holder.imageView);
             }
 

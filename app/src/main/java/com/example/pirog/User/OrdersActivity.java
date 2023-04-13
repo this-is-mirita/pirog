@@ -2,6 +2,7 @@ package com.example.pirog.User;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,6 +38,9 @@ public class OrdersActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Корзина");
+        setSupportActionBar(toolbar);
     }
 
     @Override

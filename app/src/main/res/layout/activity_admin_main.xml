@@ -35,7 +35,7 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:text="Магазин тортов, десертов и всего, что сладкое."
+                android:text="Панель админа выберите, что будете делать!"
                 android:textAlignment="center"
                 android:textColor="@color/pink"
                 android:textSize="22sp"
@@ -43,13 +43,13 @@
                 />
 
             <Button
-                android:id="@+id/main_login_btn"
+                android:id="@+id/admin_delete_product"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/button"
                 android:padding="20dp"
-                android:text="Уже есть аккаунт? Войти."
+                android:text="Удалить товар?"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="22sp"
@@ -57,13 +57,13 @@
                 />
 
             <Button
-                android:id="@+id/main_join_btn"
+                android:id="@+id/admin_add_product"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/input_design"
                 android:padding="20dp"
-                android:text="Регистрация"
+                android:text="Добавить товар?"
                 android:textAllCaps="false"
                 android:textColor="@color/pink"
                 android:textSize="22sp"

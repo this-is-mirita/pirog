@@ -26,6 +26,7 @@
                 android:src="@color/white"
                 android:layout_width="50dp"
                 android:gravity="left"
+                android:background="@drawable/back"
                 android:layout_gravity="left"
                 android:layout_height="50dp"/>
 

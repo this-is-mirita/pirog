@@ -23,7 +23,7 @@
 
             <Button
                 android:id="@+id/btn_back_main"
-                android:src="@color/white"
+                android:background="@drawable/back"
                 android:layout_width="50dp"
                 android:gravity="left"
                 android:layout_gravity="left"

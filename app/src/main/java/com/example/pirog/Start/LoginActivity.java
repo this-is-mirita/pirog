@@ -14,11 +14,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pirog.Admin.AdminCategoryActivity;
+import com.example.pirog.Admin.AdminMainActivity;
 import com.example.pirog.User.CategoriesUsersActivity;
 import com.example.pirog.Interface.UserHelper;
 import com.example.pirog.Model.Users;
 import com.example.pirog.Prevalent.Prevalent;
 import com.example.pirog.R;
+import com.example.pirog.User.UsersHome;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -139,7 +141,7 @@ public class LoginActivity extends AppCompatActivity
                                 loadingBar.dismiss();
                                 Toast.makeText(LoginActivity.this, "Успешный вход!", Toast.LENGTH_SHORT).show();
 
-                                Intent homeIntent = new Intent(LoginActivity.this, CategoriesUsersActivity.class);
+                                Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(homeIntent);
                                 finish();
                             }
@@ -147,7 +149,7 @@ public class LoginActivity extends AppCompatActivity
                                 loadingBar.dismiss();
                                 Toast.makeText(LoginActivity.this, "Успешный вход!", Toast.LENGTH_SHORT).show();
 
-                                Intent homeIntent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
+                                Intent homeIntent = new Intent(LoginActivity.this, AdminMainActivity.class);
                                 startActivity(homeIntent);
                                 finish();
                             }

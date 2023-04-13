@@ -16,6 +16,7 @@ import com.example.pirog.Interface.UserHelper;
 import com.example.pirog.Model.Users;
 import com.example.pirog.Prevalent.Prevalent;
 import com.example.pirog.R;
+import com.example.pirog.User.UsersHome;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Успешный вход!", Toast.LENGTH_SHORT).show();
                             UserHelper.UserData = usersData;
 
-                            Intent homeIntent = new Intent(MainActivity.this, CategoriesUsersActivity.class);
+                            Intent homeIntent = new Intent(MainActivity.this, UsersHome.class);
                             Prevalent.currentOnlineUser = usersData;
                             startActivity(homeIntent);
                             finish();
